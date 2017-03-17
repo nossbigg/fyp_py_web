@@ -16,7 +16,7 @@ def get_datasets_info(request):
 def get_ml_tests_info(request):
     data = dis.get_all_ml_results()
 
-    return JsonResponse(data, json_dumps_params={'indent': 2}, safe=False)
+    return JsonResponse(data, json_dumps_params={'indent': 2})
 
 
 def get_data_collection(request):
