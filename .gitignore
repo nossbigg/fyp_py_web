@@ -1,0 +1,5 @@
+*.iml
+*.pyc
+/fyp/*.pyc
+/.idea/workspace.xml
+/.idea/libraries
