@@ -102,7 +102,7 @@ function loadDataset(data, key) {
     var collection = data[key];
 
     var tbl = $('<table>').addClass('table table-striped');
-    ;
+
     $(div_id_tgt).append(tbl);
 
     // tweet_proportion_type
@@ -185,7 +185,7 @@ function drawForCollection(collection, div_id_tgt) {
 
     // build feature vector comparison table
     var table = $("<table>").addClass('table table-striped');
-    ;
+
     var headers = $('<tr>');
     var labels = ['Feature', 'Best Classifier', 'Min', 'Max', 'Mean', 'Median', 'Std Dev', '25th Percentile', '75th Percentile', 'Overall Score'];
     $.each(labels, function (i, v) {
@@ -229,7 +229,7 @@ function drawClassifierStats(classifier_stats, collection_name, tgt) {
 
     // draw table of classifiers
     var table = $("<table>").addClass('table table-striped');
-    ;
+
     var headers = $('<tr>');
     var labels = ['Classifier', 'Min', 'Max', 'Mean', 'Median', 'Std Dev', '25th Percentile', '75th Percentile', 'Overall Score'];
     $.each(labels, function (i, v) {
@@ -596,14 +596,14 @@ function genTweetProportionLabelledUnique(collection, key, tbl) {
     }
 
     // pie chart
-    d3_data = [];
-    tweet_label_types = {
+    var d3_data = [];
+    var tweet_label_types = {
         "s": "Support",
         "d": "Deny",
         "n": "Neutral",
         "u": "Unrelated"
     };
-    max_tweets = 0;
+    var max_tweets = 0;
     $.each(collection["tweet_proportion_labelled_unique"], function (k, v) {
         max_tweets += v;
     });
@@ -620,7 +620,7 @@ function genTweetProportionLabelledUnique(collection, key, tbl) {
     // table
     var subtbl = $('<table>').addClass('table table-striped');
     var subtbl_headers = $('<tr>');
-    labels = ['Tweet Label', 'Count', 'Percentage'];
+    var labels = ['Tweet Label', 'Count', 'Percentage'];
     $.each(labels, function (i, v) {
         subtbl_headers.append($('<th>').text(v))
     });
@@ -647,8 +647,16 @@ function getTweetDistributionRetweet(collection, key, tbl) {
     );
     $(td1).append($('<br />'));
 
+    // if no labelled tweets
+    if (collection["tweet_distribution_retweet"].length == 0) {
+        $(td1).append(
+            $('<label>').text("No retweets.")
+        );
+        return;
+    }
+
     // bar chart
-    d3_data = [];
+    var d3_data = [];
     $.each(collection["tweet_distribution_retweet"], function (i, v) {
         d3_data.push({
             "legend": v[0],
