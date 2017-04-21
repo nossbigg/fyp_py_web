@@ -6,13 +6,13 @@ Source code for web front-end experiment results visualization and analysis for 
 * D3.js-driven web visualizations for quick analysis of dataset characteristics and experiment results
 
 ## Visualizations
-* **Pie Charts** to illustrate porportions of tweets
+* **Pie Charts** to illustrate porportions of tweets  
 ![Pie Chart Visualization](documentation/imgs/piechart.jpg "Pie Chart Visualization")
 
-* **Bar Charts** to illustrate tweet retweet distribution for popular tweets
+* **Bar Charts** to illustrate tweet retweet distribution for popular tweets  
 ![Bar Chart Visualization](documentation/imgs/barchart.jpg "Bar Chart Visualization")
 
-* **Line Charts** to easily compare and analyze machine learning model performance
+* **Line Charts** to easily compare and analyze machine learning model performance  
 ![Line Chart Visualization](documentation/imgs/linechart.jpg "Line Chart Visualization")
 
 ## Related Projects
