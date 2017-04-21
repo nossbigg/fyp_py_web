@@ -17,3 +17,4 @@ Source code for web front-end experiment results visualization and analysis for 
 
 ## Related Projects
 * [fyp_py](https://github.com/nossbigg/fyp_py): Repository for main analysis codes for research project
+* [fyp_tweet_harvester](https://github.com/nossbigg/fyp_tweet_harvester): Android-based tweet harvester
